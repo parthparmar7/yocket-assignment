@@ -141,7 +141,7 @@ export default {
 
 .bimg{
 	background-image: url('../assets/section-two.png');
-	padding-bottom: 50%;
+	padding-bottom: 30%;
 }
 .margin1{
 	padding-top: 2em;

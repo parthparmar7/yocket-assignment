@@ -1,6 +1,7 @@
 module.exports = (app) => {
     const complaint = require('../controllers/complaint.controller.js');
-    const event = require('../controllers/event.controller.js')
+    const event = require('../controllers/event.controller.js');
+    const user = require('../controllers/user.controller.js');
 
     // Create a new complaint
     app.post('/complaint', complaint.create);
@@ -14,12 +15,20 @@ module.exports = (app) => {
     // Delete a complaint with complaintId
     app.delete('/deleteComplaint/:complaintId', complaint.delete);
 
-
+    //Create a new event for bulletin board
     app.post('/addEvent',event.create);
 
+    // Retrieve all events
     app.get('/getEvents',event.findAll);
 
-    app.delete('/deleteEvent/:eventId',event.delete)
+    // Delete a event
+    app.delete('/deleteEvent/:eventId',event.delete);
+
+    //User signup
+    app.post('/signup',user.create);
+
+    //User login
+    app.get('/login',user.login);
 
 
     

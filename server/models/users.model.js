@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-const users = mongoose.schema({
+const users = mongoose.Schema({
   username: {
         type: String,
         unique: true,

@@ -67,7 +67,7 @@ export default{
 	margin-left: 16em;
 }
 .list-group{
-	padding-bottom: 10px;
+	padding-top: 3em;
 }
 .list-group-item{
 	text-align: left;

@@ -28,6 +28,6 @@ export default new Router({
       path: '/showEvents',
       name: 'showEvents',
       component: showEvents
-    }
+    },
   ]
 })
