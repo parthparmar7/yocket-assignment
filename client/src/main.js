@@ -8,10 +8,17 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Router from 'vue-router'
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
+
+library.add(faBullhorn)
+library.add(faCalendar)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

@@ -1,32 +1,34 @@
 <template>
+	<div class="bimg">
 	<b-container>
-		<b-list-group>
+		<div class="margin1">
+		<b-list-group class="heading">
 			<b-row><b-col>
-				<h4><b-list-group-item flex-fill variant="dark">Name</b-list-group-item></h4>
+				<h6><b-list-group-item flex-fill variant="info">Name</b-list-group-item></h6>
 			</b-col><b-col>
-				<h4><b-list-group-item flex-fill variant="dark">Room Number</b-list-group-item></h4>
+				<h6><b-list-group-item flex-fill variant="info">Room Number</b-list-group-item></h6>
 			</b-col><b-col>
-				<h4><b-list-group-item flex-fill variant="dark">Complaint Type</b-list-group-item></h4>
+				<h6><b-list-group-item flex-fill variant="info">Complaint Type</b-list-group-item></h6>
 			</b-col><b-col>
-				<h4><b-list-group-item flex-fill variant="dark">Description</b-list-group-item></h4>
+				<h6><b-list-group-item flex-fill variant="info">Description</b-list-group-item></h6>
 			</b-col><b-col>
-				<h4><b-list-group-item flex-fill variant="dark">Delete Items</b-list-group-item></h4>
+				<h6><b-list-group-item flex-fill variant="info">Delete Items</b-list-group-item></h6>
 			</b-col></b-row>
 		</b-list-group>
 	<b-list-group md>
               <div v-for="com in complaints">
               	<b-row>
               		<b-col>
-                <b-list-group-item flex-fill  button variant="info">{{ com.name}}</b-list-group-item>
+                <b-list-group-item flex-fill  button variant="success">{{ com.name}}</b-list-group-item>
             		</b-col>
             		<b-col>
-                <b-list-group-item flex-fill button variant="info">{{com.roomNumber}}</b-list-group-item>
+                <b-list-group-item flex-fill button variant="success">{{com.roomNumber}}</b-list-group-item>
             		</b-col>
             		<b-col>
-                <b-list-group-item flex-fill button variant="info">{{com.complaintType}}</b-list-group-item>
+                <b-list-group-item flex-fill button variant="success">{{com.complaintType}}</b-list-group-item>
            			</b-col>
            			<b-col>
-                <b-list-group-item flex-fill button variant="info">{{com.description}}</b-list-group-item>
+                <b-list-group-item flex-fill button variant="success">{{com.description}}</b-list-group-item>
             		</b-col>
             		<b-col>
             	<b-button variant="danger" @click="deleteComplaint(com._id,com)">Delete</b-button>
@@ -37,7 +39,9 @@
         		</b-row>
               </div>
           </b-list-group>
+      </div>
       </b-container>
+  </div>
 </template>
 
 <script>
@@ -94,3 +98,17 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.bimg{
+	background-image: url('../assets/section-two.png');
+	padding-bottom: 50%;
+}
+.margin1{
+	padding-top: 2em;
+}
+h6{
+	font-weight: bold;
+}
+</style>

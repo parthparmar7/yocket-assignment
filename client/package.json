@@ -10,8 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.28",
     "vue": "^2.5.2",
+    "vue-fontawesome": "0.0.2",
+    "vue-icons": "^2.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

@@ -1,7 +1,9 @@
 <template>
+  <div class="background-image">
   <b-container>
-  <div>
+  <div class="margin1">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <div class="margin2">
       <b-form-group
         id="input-group-1"
         label="Your Name:"
@@ -14,7 +16,7 @@
           placeholder="Enter name"
         ></b-form-input>
       </b-form-group>
-
+      <br>
       <b-form-group 
       id="input-group-2" 
       label="Your Room Number:" 
@@ -26,7 +28,7 @@
           placeholder="Enter Room Number"
         ></b-form-input>
       </b-form-group>
-
+      <br>
       <b-form-group id="input-group-3" label="Complaint Type:" label-for="input-3">
         <b-form-select
           id="input-3"
@@ -35,7 +37,7 @@
           required
         ></b-form-select>
       </b-form-group>
-
+      <br>
       <b-form-textarea 
       id="input-group-4" 
       placeholder="Explain issue in detail:" 
@@ -44,13 +46,15 @@
       rows= "4"
       max-rows="6">
       </b-form-textarea>
-
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+      <br><br>
+      <b-button type="submit" size="lg" variant="primary">Submit</b-button>
+      <b-button type="reset" size="lg" variant="danger">Reset</b-button>
+    </div>
     </b-form>
     
   </div>
 </b-container>
+</div>
 </template>
 
 <script>
@@ -97,6 +101,23 @@ export default {
 </script>
 
 <style scoped>
+.margin1{
+
+  padding-top: 1.2em; 
+  padding-bottom: 50%;
+}
+.margin2{
+    color: #000000;
+    margin-top: 4em;
+    font-weight: bold;
+    font-size: 18px;
+}
+.background-image{
+    background-image: url('../assets/section-two.png');
+}
+b-form-group{
+  margin-top: 10px;
+}
 h1, h2 {
   font-weight: normal;
 }
